@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+//in any recursion problem , identify which task you have to do mainly like here we wanted to have a swap from recurison fucntion and then l++ r-- from calling recrusive fucntion . that was the main task .
+
 void reverse(int a[],int n,int l,int r){
         cout<<"3"<<endl;
 
@@ -35,5 +38,7 @@ int main(){
     }
     cout<<endl;
 }
-//12345 54321 
-//swap(i,)
+
+
+//we can reduce the number of varibales 
+// for i=0 we are swappig it with last index n-i-1 so overall f(i,n-i-1);
