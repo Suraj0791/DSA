@@ -132,3 +132,42 @@ int knapsack(int i, int W, vector<int>& wt, vector<int>& val) {
 
 
 */
+
+
+
+/*
+
+✅ The Clean Template:
+Whenever you’re solving a 0/1 decision problem (like knapsack, subsets, coins, etc), this thinking applies:
+
+int take = 0;
+if (can_take(i, capacity)) {
+    take = ... + f(i-1, new_capacity);
+}
+int skip = f(i-1, capacity);
+return max(take, skip);
+
+
+What are the decisions I can make?
+
+Take the item
+
+Skip the item
+
+What are the conditions for those decisions?
+
+I can only take it if it fits: wt[i] <= W
+
+So I’ll do:
+
+skip = f(i-1, W)
+
+take = 0, and if wt[i] <= W, then:
+
+take = val[i] + f(i-1, W - wt[i])
+
+
+
+
+
+*/
